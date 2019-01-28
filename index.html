@@ -36,15 +36,48 @@
       <h1 class="visually-hidden">Магазин мороженного Gllacy Shop</h1>
       <section class="slider">
         <h2 class="visually-hidden">Слайдер</h2>
-        <!--Слайдер-->
+        <ul class="slider-list">
+          <li id="slide1" class="slider-item">
+              <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+              <a href="#" class="button">Давайте оба</a>
+          </li>
+        </ul>
+        <ul class="slider-nav">
+          <li id="slide-nav1"></li>
+          <li id="slide-nav2"></li>
+          <li id="slide-nav3"></li>
+        </ul>
       </section>
       <section class="action">
         <h2 class="visually-hidden">Акции</h2>
-        <!--Акции-->
+        <div class="action-rasp">
+          <h3>Малинка даром!</h3>
+          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a href="#" class="button"></a>
+        </div>
+        <div class="action-chock">
+          <h3>Шоколадки даром!</h3>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a href="#" class="button"></a>
+        </div>
       </section>
       <section class="featured-products">
         <h2 class="visually-hidden">Избранные товары</h2>
-        <!-- Избранные товары -->
+        <ul class="catalog-grid">
+            <li class="catalog-grid-item">
+              <a href="product.html">
+                <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+              </a>
+              <img src="placehold.it/267x267"
+                    width="267"
+                    height="267"
+                    alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <!--Как лучше сделать, вставить плашку хита в разметку
+                или навесить класс и стилизовать в CSS с помощью before?-->
+              <span class="hit-mark">ХИТ</span>
+              <p class="catalog-grid-item-price">310 &#8399;<small>/кг</small></p>
+            </li>
+          </ul>
       </section>
       <section class="features">
         <h2 class="visually-hidden">Особенности</h2>
@@ -92,7 +125,17 @@
       </section>
       <section  class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <!--Карта-->
+        <img src="" alt="" width="1302" height="430">
+        <address class="map-address">
+          <p>Адрес главного офиса и офлайн-магазина:
+            <span class="big">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+          </p>
+          <p>Для заказов по телефону:
+            <span class="big">8 812 450-25-25</span>
+            (с 10 до 20 ежедневно)
+          </p>
+          <a href="contacts.html" class="button">Форма обратной связи</a>
+        </address>
       </section>
     </main>
     <footer class="page-footer">
@@ -118,7 +161,6 @@
     <section class="modal modal-login">
       <h2 class="visually-hidden">Вход</h2>
       <!--Форма входа-->
-      <span class="modal-close">X</span>
     </section>
     <section class="modal modal-feedback">
       <h2>Форма обратной связи</h2>
