@@ -11,7 +11,7 @@
       </a>
       <nav class="main-navigation">
         <ul class="main-menu">
-          <li class="main-menu-current"><a href="catalog.html">Каталог</a>
+          <li class="main-menu-active"><a href="catalog.html">Каталог</a>
             <ul class="catalog-menu">
               <li class="catalog-menu-novelties"><a href="novelties.html">Новинки</a></li>
               <li class="catalog-menu-item-current"><a href="catalog.html">Сливочное</a></li>
@@ -25,9 +25,68 @@
         </ul>
         <p class="main-navigation-search">
           <!--Форма поиска-->
+          <a href="search.html"><span class="visually-hidden">Поиск</span></a>
+          <form action="https://echo.htmlacademy.ru" method="GET">
+            <input type="text" name="search" aria-label="Поле поиска">
+          </form>
         </p>
         <p class="main-navigation-login">Вход</p>
-        <p class="main-navigation-cart cart-full">2 товара</p>
+        <section class="main-navigation-cart cart-full">
+          <a href="cart.html" aria-label="В корзине 2 товара">2 товара</a>
+          <div class="modal modal-cart">
+            <form class="modal-cart-form" action="https://echo.htmlacademy.ru" method="POST">
+              <ul>
+                <li class="modal-cart-form-item">
+                  <input type="hidden" name="plombir-s-apelsinovim-dzhemom" value="1,5">
+                  <button class="modal-cart-form-item-close" type="button">
+                    <span class="visually-hidden">Удалить товар</span>
+                  </button>
+                  <span class="modal-cart-form-item-name">
+                    Пломбир с апельсиновым джемом
+                  </span>
+                  <span class="modal-cart-form-item-amount-price">
+                    <span class="modal-cart-form-item-amount">
+                      1,5 кг
+                    </span>
+                    x
+                    <span class="modal-cart-form-item-price">
+                        200 руб.
+                    </span>
+                  </span>
+                  <span class="modal-cart-form-item-cost">
+                    300 руб.
+                  </span>
+                </li>
+                <li class="modal-cart-form-item">
+                  <input type="hidden" name="klubnichnyj-plombir-s-prisypkoj
+                  iz-belogo-shokolada" value="1,5">
+                  <button class="modal-cart-form-item-close" type="button">
+                    <span class="visually-hidden">Удалить товар</span>
+                  </button>
+                  <span class="modal-cart-form-item-name">
+                    Клубничный пломбир с присыпкой
+                    из белого шоколада
+                  </span>
+                  <span class="modal-cart-form-item-amount-price">
+                    <span class="modal-cart-form-item-amount">
+                      1,5 кг
+                    </span>
+                    x
+                    <span class="modal-cart-form-item-price">
+                        300 руб.
+                    </span>
+                  </span>
+                  <span class="modal-cart-form-item-cost">
+                    450 руб.
+                  </span>
+                </li>
+              </ul>
+              <hr>
+              <p class="modal-cart-form-total">Итого: 750 руб.</p>
+              <button class="button modal-cart-form-button" type="submit">Оформить заказ</button>
+            </form>
+          </div>
+        </section>
       </nav>
       <address class="page-header-contacts">
         с 10 до 20, ежедневно
@@ -203,8 +262,25 @@
       </p>
     </footer>
     <section class="modal modal-login">
-      <h2 class="visually-hidden">Вход</h2>
-      <!--Форма входа-->
-    </section>
+        <h2 class="visually-hidden">Вход</h2>
+        <!--Форма входа-->
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-email">
+              Электронная почта
+            </label>
+            <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+          </p>
+          <p>
+            <label class="visually-hidden" for="user-password">
+              Пароль
+            </label>
+            <input id="user-password" type="password" name="user-password" placeholder="Пароль">
+          </p>
+          <button class="button" type="submit">Войти</button>
+          <a class="modal-login-link" href="forget-password.html">Забыли пароль?</a>
+          <a class="modal-login-link" href="registration.html">Новая регистрация</a>
+        </form>
+      </section>
   </body>
 </html>
