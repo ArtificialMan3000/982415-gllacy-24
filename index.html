@@ -21,14 +21,38 @@
           <li><a href="delivery.html">Доставка и оплата</a></li>
           <li><a href="about.html">О компании</a></li>
         </ul>
-        <p class="main-navigation-search">
+        <section class="main-navigation-search">
           <!--Форма поиска-->
-          <a href="search.html"><span class="visually-hidden">Поиск</span></a>
-          <form action="https://echo.htmlacademy.ru" method="GET">
-            <input type="text" name="search" aria-label="Поле поиска">
-          </form>
-        </p>
-        <p class="main-navigation-login">Вход</p>
+          <a href="search.html"><span class="visually-hidden" role="heading" aria-level="2">Поиск</span></a>
+          <div class="popup popup-search">
+            <form action="https://echo.htmlacademy.ru" method="GET">
+              <input type="text" name="search" aria-label="Поле поиска">
+            </form>
+          </div>
+        </section>
+        <section class="main-navigation-login">
+          <a href="login.html" role="heading" aria-level="2">Вход</a>
+          <div class="popup popup-login">
+            <!--Форма входа-->
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="user-email">
+                  Электронная почта
+                </label>
+                <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+              </p>
+              <p>
+                <label class="visually-hidden" for="user-password">
+                  Пароль
+                </label>
+                <input id="user-password" type="password" name="user-password" placeholder="Пароль">
+              </p>
+              <button class="button" type="submit">Войти</button>
+              <a class="modal-login-link" href="forget-password.html">Забыли пароль?</a>
+              <a class="modal-login-link" href="registration.html">Новая регистрация</a>
+            </form>
+          </div>
+        </section>
         <div class="main-navigation-cart cart-empty">
           <a href="cart.html" aria-label="Корзина пуста">Пусто</a>
         </div>
@@ -220,32 +244,11 @@
       </ul>
       <p class="page-footer-copyright">
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="HTML Academy">
+          <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
         </a>
         Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
       </p>
     </footer>
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Вход</h2>
-      <!--Форма входа-->
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="visually-hidden" for="user-email">
-            Электронная почта
-          </label>
-          <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
-        </p>
-        <p>
-          <label class="visually-hidden" for="user-password">
-            Пароль
-          </label>
-          <input id="user-password" type="password" name="user-password" placeholder="Пароль">
-        </p>
-        <button class="button" type="submit">Войти</button>
-        <a class="modal-login-link" href="forget-password.html">Забыли пароль?</a>
-        <a class="modal-login-link" href="registration.html">Новая регистрация</a>
-      </form>
-    </section>
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим</p>
