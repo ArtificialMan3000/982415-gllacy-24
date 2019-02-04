@@ -25,7 +25,7 @@
         </ul>
         <section class="main-navigation-search">
           <!--Форма поиска-->
-          <a href="search.html"><span class="visually-hidden" role="heading" aria-level="2">Поиск</span></a>
+          <a href="search.html" role="heading" aria-level="2">Поиск</a>
           <div class="popup popup-search">
             <form action="https://echo.htmlacademy.ru" method="GET">
               <input type="text" name="search" aria-label="Поле поиска">
@@ -60,16 +60,18 @@
           <a href="cart.html" aria-label="В корзине 2 товара">2 товара</a>
           <div class="popup popup-cart">
             <form class="popup-cart-form" action="https://echo.htmlacademy.ru" method="POST">
-              <ul>
-                <li class="popup-cart-form-item">
-                  <input type="hidden" name="plombir-s-apelsinovim-dzhemom" value="1,5">
-                  <button class="popup-cart-form-item-close" type="button">
-                    <span class="visually-hidden">Удалить товар</span>
-                  </button>
-                  <span class="popup-cart-form-item-name">
+              <table>
+                <tr class="popup-cart-form-item">
+                  <td>
+                    <input type="hidden" name="plombir-s-apelsinovim-dzhemom" value="1,5">
+                    <button class="popup-cart-form-item-close" type="button">
+                      Удалить товар
+                    </button>
+                  </td>
+                  <td class="popup-cart-form-item-name">
                     Пломбир с апельсиновым джемом
-                  </span>
-                  <span class="popup-cart-form-item-amount-price">
+                  </td>
+                  <td class="popup-cart-form-item-amount-price">
                     <span class="popup-cart-form-item-amount">
                       1,5 кг
                     </span>
@@ -77,22 +79,24 @@
                     <span class="popup-cart-form-item-price">
                         200 руб.
                     </span>
-                  </span>
-                  <span class="popup-cart-form-item-cost">
+                  </td>
+                  <td class="popup-cart-form-item-cost">
                     300 руб.
-                  </span>
-                </li>
-                <li class="popup-cart-form-item">
-                  <input type="hidden" name="klubnichnyj-plombir-s-prisypkoj
-                  iz-belogo-shokolada" value="1,5">
-                  <button class="popup-cart-form-item-close" type="button">
-                    <span class="visually-hidden">Удалить товар</span>
-                  </button>
-                  <span class="popup-cart-form-item-name">
+                  </td>
+                </tr>
+                <tr class="popup-cart-form-item">
+                  <td>
+                    <input type="hidden" name="klubnichnyj-plombir-s-prisypkoj
+                    iz-belogo-shokolada" value="1,5">
+                    <button class="popup-cart-form-item-close" type="button">
+                      Удалить товар
+                    </button>
+                  </td>
+                  <td class="popup-cart-form-item-name">
                     Клубничный пломбир с присыпкой
                     из белого шоколада
-                  </span>
-                  <span class="popup-cart-form-item-amount-price">
+                  </td>
+                  <td class="popup-cart-form-item-amount-price">
                     <span class="popup-cart-form-item-amount">
                       1,5 кг
                     </span>
@@ -100,12 +104,12 @@
                     <span class="popup-cart-form-item-price">
                         300 руб.
                     </span>
-                  </span>
-                  <span class="popup-cart-form-item-cost">
+                  </td>
+                  <td class="popup-cart-form-item-cost">
                     450 руб.
-                  </span>
-                </li>
-              </ul>
+                  </td>
+                </tr>
+              </table>
               <hr>
               <p class="popup-cart-form-total">Итого: 750 руб.</p>
               <button class="button popup-cart-form-button" type="submit">Оформить заказ</button>
@@ -115,7 +119,7 @@
       </nav>
       <address class="page-header-contacts">
         с 10 до 20, ежедневно
-        8 812 450-25-25
+        <a href="tel:88124502525">8 812 450-25-25</a>
       </address>
     </header>
     <main>
@@ -329,27 +333,11 @@
     </main>
     <footer class="page-footer">
         <p class="page-footer-socials">
-            <a href="twitter.com">
-              <span class="visually-hidden">
-                Twitter
-              </span>
-            </a>
-            <a href="instagramm.ru">
-              <span class="visually-hidden">
-                Instagramm
-              </span>
-            </a>
-            <a href="facebook.com">
-              <span class="visually-hidden">
-                Facebook
-              </span>
-            </a>
-            <a href="vk.ru">
-              <span class="visually-hidden">
-                Вконтакте
-              </span>
-            </a>
-          </p>
+          <a href="twitter.com">Twitter</a>
+          <a href="instagramm.ru">Instagramm</a>
+          <a href="facebook.com">Facebook</a>
+          <a href="vk.ru">Вконтакте</a>
+        </p>
       <ul class="page-footer-menu">
         <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
         <li><a href="#">О производстве</a></li>
