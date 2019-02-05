@@ -141,65 +141,55 @@
         </h2>
         <!--Фильтр-->
         <form action="https://echo.htmlacademy.ru" method="GET">
-          <p class="filter-item filter-sort">
-            <label for="filter-sort">Сортировка:</label>
+          <fieldset class="filter-item filter-sort">
+            <legend>Сортировка:</legend>
             <select id="filter-sort" name="filter-sort">
               <option value="popular">По популярности</option>
               <option value="price">По цене</option>
               <option value="new">По новизне</option>
             </select>
-          </p>
-          <p class="filter-item filter-price">
-            <label for="filter-price">Цена:
+          </fieldset>
+          <fieldset class="filter-item filter-price">
+            <legend>Цена:</legend>
+            <span class="filter-price-range">
               <output id="filter-price-min" name="filter-price-min">0</output> руб.
                -
               <output id="filter-price-max" name="filter-price-max">700</output> руб.
-            </label>
+            </span>
             <input type="range" name="filter-price" id="filter-price" min="0" max="700" step="10">
-          </p>
-          <p class="filter-item filter-fat" role="radiogroup" aria-labelledby="filter-fat-label">
-            <span id="filter-fat-label">Жирность:</span>
-            <label>
-              <input type="radio" name="filter-fat" value="0">
-              0%
-            </label>
-            <label>
-              <input type="radio" name="filter-fat" value="to10" checked>
-              до 10%
-            </label>
-            <label>
-              <input type="radio" name="filter-fat" value="to30">
-              до 30%
-            </label>
-            <label>
-              <input type="radio" name="filter-fat" value="from30">
-              выше 30%
-            </label>
-          </p>
-          <p class="filter-item filter-fat" aria-labelledby="filter-fillers-label">
-              <span id="filter-fillers-label">Наполнители:</span>
-              <label>
-                <input type="checkbox" name="filter-fillers-chock" checked>
-                шоколадные
-              </label>
-              <label>
-                <input type="checkbox" name="filter-fillers-sugar" checked>
-                сахарные присыпки
-              </label>
-              <label>
-                <input type="checkbox" name="filter-fillers-fruits">
-                фрукты
-              </label>
-              <label>
-                <input type="checkbox" name="filter-fillers-syrup">
-                сиропы
-              </label>
-              <label>
-                <input type="checkbox" name="filter-fillers-jam">
-                джемы
-              </label>
-            </p>
-            <button type="submit">Применить</button>
+          </fieldset>
+          <fieldset class="filter-item filter-fat">
+            <legend>Жирность:</legend>
+            <label for="filter-fat-0">0%</label>
+            <input id="filter-fat-0" type="radio" name="filter-fat" value="0">
+
+            <label for="filter-fat-to10">до 10%</label>
+            <input id="filter-fat-to10" type="radio" name="filter-fat" value="to10" checked>
+
+            <label for="filter-fat-to30">до 30%</label>
+            <input id="filter-fat-to30" type="radio" name="filter-fat" value="to30">
+
+            <label for="filter-fat-from30">выше 30%</label>
+            <input id="filter-fat-from30" type="radio" name="filter-fat" value="from30">
+          </fieldset>
+          <fieldset class="filter-item filter-fat">
+            <legend>Наполнители:</legend>
+            <label for="filter-fillers-chock">шоколадные</label>
+            <input id="filter-fillers-chock" type="checkbox" name="filter-fillers-chock" checked>
+
+            <label for="filter-fillers-sugar">сахарные присыпки</label>
+            <input id="filter-fillers-sugar" type="checkbox" name="filter-fillers-sugar" checked>
+
+            <label for="filter-fillers-fruits">фрукты</label>
+            <input id="filter-fillers-fruits" type="checkbox" name="filter-fillers-fruits">
+
+            <label for="filter-fillers-syrup">сиропы</label>
+            <input id="filter-fillers-syrup" type="checkbox" name="filter-fillers-syrup">
+
+            <label for="filter-fillers-jam">джемы</label>
+            <input id="filter-fillers-jam" type="checkbox" name="filter-fillers-jam">
+          </fieldset>
+          <button type="submit">Применить</button>
         </form>
       </section>
       <section class="catalog-search-result">
