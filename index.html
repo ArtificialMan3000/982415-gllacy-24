@@ -2,14 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Gllacy Shop - магазин мороженного</title>
+    <title>Gllacy Shop - магазин мороженого</title>
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
     <header class="page-header">
       <img class="page-header-logo" src="img/logo.svg" alt="Gllacy Shop" width="164" height="64">
       <nav class="main-navigation">
         <ul class="main-menu">
-          <li><a href="catalog.html">Каталог</a>
+          <li><a class="main-menu-item" href="catalog.html">Каталог</a>
             <ul class="catalog-menu">
               <li class="catalog-menu-novelties"><a href="novelties.html">Новинки</a></li>
               <li class="catalog-menu-item"><a href="catalog.html">Сливочное</a></li>
@@ -18,8 +20,8 @@
               <li class="catalog-menu-item"><a href="catalog.html">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="delivery.html">Доставка и оплата</a></li>
-          <li><a href="about.html">О компании</a></li>
+          <li><a class="main-menu-item" href="delivery.html">Доставка и оплата</a></li>
+          <li><a class="main-menu-item" href="about.html">О компании</a></li>
         </ul>
         <section class="main-navigation-search">
           <!--Форма поиска-->
@@ -63,7 +65,7 @@
       </address>
     </header>
     <main>
-      <h1 class="visually-hidden">Магазин мороженного Gllacy Shop</h1>
+      <h1 class="visually-hidden">Магазин мороженого Gllacy Shop</h1>
       <section class="slider">
         <h2 class="visually-hidden">Слайдер</h2>
         <ul class="slider-list">
@@ -178,20 +180,23 @@
           столу
         </a>
       </article>
-      <section class="subscription">
-        <h2 class="visually-hidden">Подписка</h2>
-        <p class="subscription-info">
-          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
-          что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-        </p>
-        <!--Форма подписки-->
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <label class="visually-hidden" for="subscribtion-email">
-            Электронная почта
-          </label>
-          <input type="email" name="subscribtion-email" id="subscribtion-email" placeholder="Электронная почта">
-        </form>
-      </section>
+      <div class="background-wrapper">
+        <section class="subscription">
+          <h2 class="visually-hidden">Подписка</h2>
+          <p class="subscription-info">
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+            что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+          </p>
+          <!--Форма подписки-->
+          <form class="subscription-form" action="https://echo.htmlacademy.ru" method="POST">
+            <label class="visually-hidden" for="subscribtion-email">
+              Электронная почта
+            </label>
+            <input type="email" name="subscribtion-email" id="subscribtion-email" placeholder="Электронная почта">
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
       <section  class="map">
         <h2 class="visually-hidden">Карта</h2>
         <img src="img/map.png" alt="Карта" width="1302" height="430">
@@ -224,7 +229,7 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
         </a>
-        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
+        Сделано в <a class="page-footer-copyright-text-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
       </p>
     </footer>
     <section class="modal modal-feedback">

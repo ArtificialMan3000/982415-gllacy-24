@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "Roboto";
+  src: "../font/roboto.woff2" format("woff2"),
+    "../font/roboto.woff" format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: "../font/robotomedium.woff2" format("woff2"),
+    "../font/robotomedium.woff" format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: "../font/robotobold.woff2" format("woff2"),
+    "../font/robotobold.woff" format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #fff;
+  background-color: #859e90;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  /* Скопировал из Зеплина =) */
+  box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
+  background-image: linear-gradient(to top, #ca3824, #f26843);
+}
+.button:hover,
+.button:focus {
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image:
+    linear-gradient(to top, #e74a35, #f26843),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+.button:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image:
+    linear-gradient(to bottom, #e74a35, #f26843),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
+}
+
+.main-menu {
+  list-style: none;
+}
+.main-menu-item {
+  font-weight: bold;
+  line-height: 18px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.main-menu-item:hover,
+.main-menu-item:focus,
+.main-menu-item:active
+/* Почему в таком порядке? */ {
+  background-color: white;
+  border-radius: 50%;
+  color: #333;
+}
+
+.main-navigation-search a,
+.main-navigation-login a,
+.main-navigation-cart a {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.main-navigation-search a:hover,
+.main-navigation-login a:hover,
+.main-navigation-search a:focus,
+.main-navigation-login a:focus {
+  color: black;
+  background-color: #fff;
+}
+
+.page-header-contacts {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  font-style: normal;
+}
+.page-header-contacts a {
+  font-size: 22px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.features {
+  border-radius: 15px;
+  background-image: url("../img/waffle-pattern-small.jpg");
+  background-repeat: repeat;
+}
+.features-info {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #323232;
+}
+.features-list {
+  list-style: none;
+  color: #323232;
+}
+
+.article {
+  border-radius: 15px;
+  background-image: url("../img/straw-background.jpg");
+  background-repeat: no-repeat;
+  background-position: right 0 top 0;
+}
+.article h2 {
+  font-weight: 500;
+  color: #323232;
+}
+.article a {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+}
+.article a:hover,
+.article a:focus,
+.article a:active {
+  color: #e84d37;
+}
+
+.background-wrapper {
+  /* Сделал через фон, потому что вырезать рамку - это жесть) */
+  background-image: url("../img/post-pattern.png");
+  background-repeat: repeat;
+  padding: 5px;
+  height: 200px;
+  border-radius: 10px;
+}
+.subscription {
+  background-color: #f8f7f4;
+  border-radius: 10px;
+}
+.subscription-info {
+  color: #5a5a5a;
+}
+.subscribtion-form input {
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
+  line-height: 24px;
+  color: #999; /*Или это для плейсхолдера?*/
+}
+
+.page-footer-socials a {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-clip: padding-box;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+.page-footer-socials a:hover,
+.page-footer-socials a:focus {
+  background-color: #fff;
+}
+.page-footer-menu {
+  list-style-type: none;
+}
+.page-footer-menu a {
+  font-size: 13px;
+  line-height: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+}
+.page-footer-menu a:hover,
+.page-footer-menu a:focus,
+.page-footer-menu a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
+}
+.page-footer-menu-vendors a {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+.page-footer-copyright {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(254, 254, 254, 0.5);
+}
+.page-footer-copyright-text-link {
+  color: rgba(254, 254, 254, 0.5);
+  border-bottom: 1px solid rgba(254, 254, 254, 0.2);
+}
