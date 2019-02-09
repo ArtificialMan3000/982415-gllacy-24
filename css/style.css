@@ -28,6 +28,9 @@ body {
   color: #fff;
   background-color: #859e90;
 }
+.inner-page {
+  font-weight: 500;
+}
 
 a {
   text-decoration: none;
@@ -39,9 +42,11 @@ a {
   color: #fff;
   border: none;
   border-radius: 50%;
+  font-weight: 700;
   /* Скопировал из Зеплина =) */
   box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
   background-image: linear-gradient(to top, #ca3824, #f26843);
+  text-align: center;
 }
 .button:hover,
 .button:focus {
@@ -60,19 +65,26 @@ a {
 .main-menu {
   list-style: none;
 }
-.main-menu-item {
+.main-menu-item > a {
   font-weight: bold;
   line-height: 18px;
   color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.main-menu-item:hover,
-.main-menu-item:focus,
-.main-menu-item:active
+.main-menu-item > a:hover,
+.main-menu-item > a:focus,
+.main-menu-item > a:active
 /* Почему в таком порядке? */ {
-  background-color: white;
+  background-color: #f7f6f3;
   border-radius: 50%;
   color: #333;
+}
+.main-menu-item > a:active {
+  background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0 #696969;
+}
+.main-menu-item-active > a {
+  color: #d07058;
 }
 
 .main-navigation-search a,
@@ -85,11 +97,15 @@ a {
   line-height: 16px;
   font-weight: 500;
 }
+.cart-full a {
+  color: #323232;
+  background-color: #fff;
+}
 .main-navigation-search a:hover,
 .main-navigation-login a:hover,
 .main-navigation-search a:focus,
 .main-navigation-login a:focus {
-  color: black;
+  color: #323232;
   background-color: #fff;
 }
 
@@ -103,6 +119,58 @@ a {
   font-size: 22px;
   line-height: 24px;
   color: #fff;
+}
+
+.breadcrumbs {
+  list-style: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.breadcrumbs a {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
+}
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.catalog-grid {
+  list-style: none;
+}
+.catalog-grid-item:hover,
+.catalog-grid-item:focus {
+  background-color: #f8f7f4;/*Непонятно, почему фон загораживает контент*/
+  opacity: 0.2;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+.catalog-grid-item h3 {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.catalog-grid-item a:hover,
+.catalog-grid-item a:focus,
+.catalog-grid-item a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
+}
+.catalog-grid-item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+}
+.catalog-grid-item-price small {
+  font-size: 30px;
 }
 
 .features {
@@ -165,6 +233,9 @@ a {
   color: #999; /*Или это для плейсхолдера?*/
 }
 
+.page-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
 .page-footer-socials a {
   background-color: rgba(255, 255, 255, 0.8);
   background-clip: padding-box;
@@ -203,4 +274,10 @@ a {
 .page-footer-copyright-text-link {
   color: rgba(254, 254, 254, 0.5);
   border-bottom: 1px solid rgba(254, 254, 254, 0.2);
+}
+.page-footer-copyright-text-link:hover,
+.page-footer-copyright-text-link:focus,
+.page-footer-copyright-text-link:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
 }
