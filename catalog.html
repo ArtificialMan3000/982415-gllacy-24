@@ -15,8 +15,8 @@
         <ul class="main-menu">
           <li class="main-menu-item main-menu-item-active"><a href="catalog.html">Каталог</a>
             <ul class="catalog-menu">
-              <li class="catalog-menu-novelties"><a href="novelties.html">Новинки</a></li>
-              <li class="catalog-menu-item-current"><a href="catalog.html">Сливочное</a></li>
+              <li class="catalog-menu-item catalog-menu-novelties"><a href="novelties.html">Новинки</a></li>
+              <li class="catalog-menu-item catalog-menu-item-active"><a href="catalog.html">Сливочное</a></li>
               <li class="catalog-menu-item"><a href="catalog.html">Щербеты</a></li>
               <li class="catalog-menu-item"><a href="catalog.html">Фруктовый лёд</a></li>
               <li class="catalog-menu-item"><a href="catalog.html">Мелорин</a></li>
@@ -144,7 +144,7 @@
         <!--Фильтр-->
         <form action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="filter-item filter-sort">
-            <legend>Сортировка:</legend>
+            <legend class="filter-header">Сортировка:</legend>
             <select id="filter-sort" name="filter-sort">
               <option value="popular">По популярности</option>
               <option value="price">По цене</option>
@@ -152,16 +152,18 @@
             </select>
           </fieldset>
           <fieldset class="filter-item filter-price">
-            <legend>Цена:</legend>
-            <span class="filter-price-range">
-              <output id="filter-price-min" name="filter-price-min">0</output> руб.
-               -
-              <output id="filter-price-max" name="filter-price-max">700</output> руб.
-            </span>
+            <div class="filter-header">
+              <legend>Цена:</legend>
+              <span class="filter-price-range">
+                <output id="filter-price-min" name="filter-price-min">0</output> руб.
+                -
+                <output id="filter-price-max" name="filter-price-max">700</output> руб.
+              </span>
+            </div>
             <input type="range" name="filter-price" id="filter-price" min="0" max="700" step="10">
           </fieldset>
           <fieldset class="filter-item filter-fat">
-            <legend>Жирность:</legend>
+            <legend class="filter-header">Жирность:</legend>
             <label for="filter-fat-0">0%</label>
             <input id="filter-fat-0" type="radio" name="filter-fat" value="0">
 
@@ -175,7 +177,7 @@
             <input id="filter-fat-from30" type="radio" name="filter-fat" value="from30">
           </fieldset>
           <fieldset class="filter-item filter-fat">
-            <legend>Наполнители:</legend>
+            <legend class="filter-header">Наполнители:</legend>
             <label for="filter-fillers-chock">шоколадные</label>
             <input id="filter-fillers-chock" type="checkbox" name="filter-fillers-chock" checked>
 
@@ -332,13 +334,13 @@
         </ul>
       </section>
       <ul class="pagination">
-        <li class="pagination-item-back"><a href="catalog.html">Назад</a></li>
-        <li class="pagination-item-active"><a>1</a></li>
+        <li class="pagination-item pagination-item-back pagination-item-disabled"><a>Назад</a></li>
+        <li class="pagination-item pagination-item-active"><a>1</a></li>
         <li class="pagination-item"><a href="catalog.html">2</a></li>
         <li class="pagination-item"><a href="catalog.html">3</a></li>
         <li class="pagination-item"><a href="catalog.html">4</a></li>
         <li class="pagination-item"><a href="catalog.html">5</a></li>
-        <li class="pagination-item-forward"><a href="catalog.html">Вперёд</a></li>
+        <li class="pagination-item pagination-item-forward"><a href="catalog.html">Вперёд</a></li>
       </ul>
     </main>
     <footer class="page-footer">
