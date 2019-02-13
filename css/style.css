@@ -20,7 +20,12 @@
   font-style: normal;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
+  box-sizing: border-box;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -34,6 +39,29 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.visually-hidden {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .button {
@@ -62,9 +90,15 @@ a {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
 }
 
-.main-menu {
-  list-style: none;
+.main-navigation {
+  display: flex;
+  padding-top: 10px;
 }
+
+.page-header-logo {
+  width: 154px;
+}
+
 .main-menu-item > a {
   font-weight: bold;
   line-height: 18px;
@@ -115,6 +149,20 @@ a {
   font-weight: 700;
 }
 
+.main-navigation-search {
+  margin-left: auto;
+  width: 33px;
+}
+.main-navigation-login {
+  width: 93px;
+}
+.main-navigation-cart {
+  width: 100px;
+}
+.main-navigation-login,
+.main-navigation-cart {
+  margin-left: 10px;
+}
 .main-navigation-search a,
 .main-navigation-login a,
 .main-navigation-cart a {
@@ -259,17 +307,13 @@ a {
   background-color: #fff;
 }
 
-.promo h3 {
-  font-size: 35px;
-  line-height: 41px;
-  font-weight: 700;
-}
-.promo p {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
+.promo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 .promo-item {
+  width: 560px;
   background-repeat: no-repeat;
   background-position: 0 0;
   border-radius: 15px;
@@ -280,9 +324,20 @@ a {
 .promo-chock {
   background-image: url("../img/chockolate.jpg");
 }
+.promo-item h3 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+.promo-item p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
 
 .breadcrumbs {
-  list-style: none;
+  margin-top: 25px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -299,14 +354,20 @@ a {
 }
 
 .page-title {
+  margin-bottom: 25px;
   font-size: 35px;
   line-height: 41px;
 }
 
 .filter {
+  width: 880px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+}
+.filter form {
+  display: flex;
+  flex-wrap: wrap;
 }
 .filter-item {
   border: none;
@@ -348,8 +409,26 @@ a {
   background-color: #ededed;
 }
 
+.featured-products {
+  margin-bottom: 40px;
+}
+
+.catalog-search-result {
+  margin-bottom: 80px;
+}
+
 .catalog-grid {
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.catalog-grid-item {
+  width: 267px;
+  padding-top: 6px;
+  /* padding-bottom: 22px; */
+}
+.catalog-grid-item img {
+  width: 267px;
 }
 .catalog-grid-item:hover,
 .catalog-grid-item:focus {
@@ -380,22 +459,42 @@ a {
 }
 
 .features {
+  margin-bottom: 40px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
   border-radius: 15px;
   background-image: url("../img/waffle-pattern-small.jpg");
   background-repeat: repeat;
 }
 .features-info {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: #323232;
 }
 .features-list {
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   color: #323232;
 }
+.features-list li {
+  width: 546px;
+}
+.features-list li:nth-child(odd) {
+  margin-right: 14px;
+}
 
+.article-subscr-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
 .article {
+  width: 560px;
   border-radius: 15px;
   background-image: url("../img/straw-background.jpg");
   background-repeat: no-repeat;
@@ -418,6 +517,7 @@ a {
 }
 
 .background-wrapper {
+  width: 560px;
   /* Сделал через фон, потому что вырезать рамку - это жесть) */
   background-image: url("../img/post-pattern.png");
   background-repeat: repeat;
@@ -478,7 +578,8 @@ a {
 }
 
 .pagination {
-  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
 }
 .pagination-item {
   font-size: 16px;
@@ -509,7 +610,12 @@ a {
   background: none;
 }
 
-.page-footer {
+.inner-page .page-footer {
+  margin-top: 30px;
+}
+.page-footer .container {
+  display: flex;
+  justify-content: space-between;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 .page-footer-socials a {

@@ -8,13 +8,13 @@
   </head>
   <body class="inner-page">
     <header class="page-header">
-      <a href="index.html">
-        <img class="page-header-logo" src="img/logo.svg" alt="Gllacy Shop" width="164" height="64">
-      </a>
-      <nav class="main-navigation">
-        <ul class="main-menu">
+      <nav class="main-navigation container">
+        <a class="page-header-logo"href="index.html">
+          <img src="img/logo.svg" alt="Gllacy Shop" width="154" height="64">
+        </a>
+        <ul class="main-menu list-reset">
           <li class="main-menu-item main-menu-item-active"><a href="catalog.html">Каталог</a>
-            <ul class="catalog-menu">
+            <ul class="catalog-menu list-reset">
               <li class="catalog-menu-item catalog-menu-novelties"><a href="novelties.html">Новинки</a></li>
               <li class="catalog-menu-item catalog-menu-item-active"><a href="catalog.html">Сливочное</a></li>
               <li class="catalog-menu-item"><a href="catalog.html">Щербеты</a></li>
@@ -130,8 +130,8 @@
         <a href="tel:+78124502525">8 812 450-25-25</a>
       </address>
     </header>
-    <main>
-      <ul class="breadcrumbs">
+    <main class="container">
+      <ul class="breadcrumbs list-reset">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li>Сливочное</li>
@@ -198,7 +198,7 @@
       </section>
       <section class="catalog-search-result">
         <h2 class="visually-hidden">Каталог: результаты поиска</h2>
-        <ul class="catalog-grid">
+        <ul class="catalog-grid list-reset">
           <li class="catalog-grid-item">
             <a href="product.html">
               <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
@@ -333,7 +333,7 @@
           </li>
         </ul>
       </section>
-      <ul class="pagination">
+      <ul class="pagination list-reset">
         <li class="pagination-item pagination-item-back pagination-item-disabled"><a>Назад</a></li>
         <li class="pagination-item pagination-item-active"><a>1</a></li>
         <li class="pagination-item"><a href="catalog.html">2</a></li>
@@ -344,24 +344,26 @@
       </ul>
     </main>
     <footer class="page-footer">
+      <div class="container">
         <p class="page-footer-socials">
           <a href="twitter.com">Twitter</a>
           <a href="instagramm.ru">Instagramm</a>
           <a href="facebook.com">Facebook</a>
           <a href="vk.ru">Вконтакте</a>
         </p>
-      <ul class="page-footer-menu">
-        <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
-        <li><a href="#">О производстве</a></li>
-        <li><a href="#">Наши документы</a></li>
-        <li><a href="#">Экологические стандарты</a></li>
-      </ul>
-      <p class="page-footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
-        </a>
-        Сделано в <a class="page-footer-copyright-text-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
-      </p>
+        <ul class="page-footer-menu list-reset">
+          <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">Экологические стандарты</a></li>
+        </ul>
+        <p class="page-footer-copyright">
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
+          </a>
+          Сделано в <a class="page-footer-copyright-text-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
+        </p>
+      </div>
     </footer>
   </body>
 </html>
