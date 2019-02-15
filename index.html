@@ -8,63 +8,65 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-navigation container">
-        <a class="page-header-logo">
-          <img src="img/logo.svg" alt="Gllacy Shop" width="154" height="64">
-        </a>
-        <ul class="main-menu list-reset">
-          <li class="main-menu-item"><a href="catalog.html">Каталог</a>
-            <ul class="catalog-menu list-reset">
-              <li class="catalog-menu-item catalog-menu-novelties"><a href="novelties.html">Новинки</a></li>
-              <li class="catalog-menu-item"><a href="catalog.html">Сливочное</a></li>
-              <li class="catalog-menu-item catalog-menu-item-active"><a href="catalog.html">Щербеты</a></li>
-              <li class="catalog-menu-item"><a href="catalog.html">Фруктовый лёд</a></li>
-              <li class="catalog-menu-item"><a href="catalog.html">Мелорин</a></li>
-            </ul>
-          </li>
-          <li class="main-menu-item"><a href="delivery.html">Доставка и оплата</a></li>
-          <li class="main-menu-item"><a href="about.html">О компании</a></li>
-        </ul>
-        <section class="main-navigation-search">
-          <!--Форма поиска-->
-          <a href="search.html" role="heading" aria-level="2">Поиск</a>
-          <div class="popup popup-search">
-            <form action="https://echo.htmlacademy.ru" method="GET">
-              <input type="text" name="search" aria-label="Поле поиска" placeholder="Что ищем?">
-            </form>
+      <div class="container">
+        <nav class="main-navigation">
+          <a class="page-header-logo">
+            <img src="img/logo.svg" alt="Gllacy Shop" width="154" height="64">
+          </a>
+          <ul class="main-menu list-reset">
+            <li class="main-menu-item"><a href="catalog.html">Каталог</a>
+              <ul class="catalog-menu list-reset">
+                <li class="catalog-menu-item catalog-menu-novelties"><a href="novelties.html">Новинки</a></li>
+                <li class="catalog-menu-item"><a href="catalog.html">Сливочное</a></li>
+                <li class="catalog-menu-item catalog-menu-item-active"><a href="catalog.html">Щербеты</a></li>
+                <li class="catalog-menu-item"><a href="catalog.html">Фруктовый лёд</a></li>
+                <li class="catalog-menu-item"><a href="catalog.html">Мелорин</a></li>
+              </ul>
+            </li>
+            <li class="main-menu-item"><a href="delivery.html">Доставка и оплата</a></li>
+            <li class="main-menu-item"><a href="about.html">О компании</a></li>
+          </ul>
+          <section class="main-navigation-search">
+            <!--Форма поиска-->
+            <a href="search.html" role="heading" aria-level="2">Поиск</a>
+            <div class="popup popup-search">
+              <form action="https://echo.htmlacademy.ru" method="GET">
+                <input type="text" name="search" aria-label="Поле поиска" placeholder="Что ищем?">
+              </form>
+            </div>
+          </section>
+          <section class="main-navigation-login">
+            <a href="login.html" role="heading" aria-level="2">Вход</a>
+            <div class="popup popup-login">
+              <!--Форма входа-->
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="user-email">
+                    Электронная почта
+                  </label>
+                  <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="user-password">
+                    Пароль
+                  </label>
+                  <input id="user-password" type="password" name="user-password" placeholder="Пароль">
+                </p>
+                <button class="button" type="submit">Войти</button>
+                <a class="popup-login-link" href="forget-password.html">Забыли пароль?</a>
+                <a class="popup-login-link" href="registration.html">Новая регистрация</a>
+              </form>
+            </div>
+          </section>
+          <div class="main-navigation-cart cart-empty">
+            <a href="cart.html" aria-label="Корзина пуста">Пусто</a>
           </div>
-        </section>
-        <section class="main-navigation-login">
-          <a href="login.html" role="heading" aria-level="2">Вход</a>
-          <div class="popup popup-login">
-            <!--Форма входа-->
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <p>
-                <label class="visually-hidden" for="user-email">
-                  Электронная почта
-                </label>
-                <input id="user-email" type="email" name="user-email" placeholder="Электронная почта">
-              </p>
-              <p>
-                <label class="visually-hidden" for="user-password">
-                  Пароль
-                </label>
-                <input id="user-password" type="password" name="user-password" placeholder="Пароль">
-              </p>
-              <button class="button" type="submit">Войти</button>
-              <a class="modal-login-link" href="forget-password.html">Забыли пароль?</a>
-              <a class="modal-login-link" href="registration.html">Новая регистрация</a>
-            </form>
-          </div>
-        </section>
-        <div class="main-navigation-cart cart-empty">
-          <a href="cart.html" aria-label="Корзина пуста">Пусто</a>
-        </div>
-      </nav>
-      <address class="page-header-contacts">
-        с 10 до 20, ежедневно
-        <a href="tel:+78124502525">8 812 450-25-25</a>
-      </address>
+        </nav>
+        <address class="page-header-contacts">
+          с 10 до 20, ежедневно
+          <a href="tel:+78124502525">8 812 450-25-25</a>
+        </address>
+      </div>
     </header>
     <main>
       <div class="container">
@@ -203,19 +205,21 @@
           </div>
         </div>
       </div>
-      <section  class="map">
+      <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <img src="img/map.png" alt="Карта" width="1302" height="430">
-        <address class="map-contacts">
-          <p>Адрес главного офиса и офлайн-магазина:
-            <span class="map-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-          </p>
-          <p>Для заказов по телефону:
-            <a class="map-phone" href="tel:+78124502525">8 812 450-25-25</a>
-            <span class="map-worktime">(с 10 до 20 ежедневно)</span>
-          </p>
-          <a href="contacts.html" class="button">Форма обратной связи</a>
-        </address>
+        <img src="img/map.png" alt="Карта" width="1200" height="430">
+        <div class="container">
+          <address class="map-contacts">
+            <p>Адрес главного офиса и офлайн-магазина:
+              <span class="map-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+            </p>
+            <p>Для заказов по телефону:
+              <a class="map-phone" href="tel:+78124502525">8 812 450-25-25</a>
+              <span class="map-worktime">(с 10 до 20 ежедневно)</span>
+            </p>
+            <a href="contacts.html" class="button">Форма обратной связи</a>
+          </address>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -233,7 +237,7 @@
           <li><a href="#">Экологические стандарты</a></li>
         </ul>
         <p class="page-footer-copyright">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <a class="page-footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
           </a>
           Сделано в <a class="page-footer-copyright-text-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
