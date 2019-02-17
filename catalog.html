@@ -23,11 +23,13 @@
             </ul>
           </li>
           <li class="main-menu-item"><a href="delivery.html">Доставка и оплата</a></li>
-          <li class="main-menu-item"><a href="about.html">О компании</a></li>
+          <li class="main-menu-item"><a href="about.html">О Компании</a></li>
         </ul>
         <section class="main-navigation-search">
           <!--Форма поиска-->
-          <a href="search.html" role="heading" aria-level="2">Поиск</a>
+          <div class="main-navigation-section-link">
+            <a href="search.html" role="heading" aria-level="2">Поиск</a>
+          </div>
           <div class="popup popup-search">
             <form action="https://echo.htmlacademy.ru" method="GET">
               <input type="text" name="search" aria-label="Поле поиска">
@@ -35,7 +37,9 @@
           </div>
         </section>
         <section class="main-navigation-login">
-          <a href="login.html" role="heading" aria-level="2">Вход</a>
+          <div class="main-navigation-section-link">
+            <a href="login.html" role="heading" aria-level="2">Вход</a>
+          </div>
           <div class="popup popup-login">
             <!--Форма входа-->
             <form action="https://echo.htmlacademy.ru" method="post">
@@ -59,7 +63,9 @@
         </section>
         <section class="main-navigation-cart cart-full">
           <h2 class="visually-hidden">Корзина</h2>
-          <a href="cart.html" aria-label="В корзине 2 товара">2 товара</a>
+          <div class="main-navigation-section-link">
+            <a href="cart.html" aria-label="В корзине 2 товара">2 товара</a>
+          </div>
           <div class="popup popup-cart">
             <form class="popup-cart-form" action="https://echo.htmlacademy.ru" method="POST">
               <table>
@@ -126,9 +132,9 @@
         </section>
       </nav>
       <address class="page-header-contacts">
-        с 10 до 20, ежедневно
-        <a href="tel:+78124502525">8 812 450-25-25</a>
-      </address>
+          <span class="page-header-worktime">С 10 до 20, ежедневно</span>
+          <a href="tel:+78124502525">8 812 450-25-25</a>
+        </address>
     </header>
     <main class="container">
       <ul class="breadcrumbs list-reset">

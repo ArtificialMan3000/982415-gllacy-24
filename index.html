@@ -24,11 +24,13 @@
               </ul>
             </li>
             <li class="main-menu-item"><a href="delivery.html">Доставка и оплата</a></li>
-            <li class="main-menu-item"><a href="about.html">О компании</a></li>
+            <li class="main-menu-item"><a href="about.html">О Компании</a></li>
           </ul>
           <section class="main-navigation-search">
             <!--Форма поиска-->
-            <a href="search.html" role="heading" aria-level="2">Поиск</a>
+            <div class="main-navigation-section-link">
+              <a href="search.html" role="heading" aria-level="2">Поиск</a>
+            </div>
             <div class="popup popup-search">
               <form action="https://echo.htmlacademy.ru" method="GET">
                 <input type="text" name="search" aria-label="Поле поиска" placeholder="Что ищем?">
@@ -36,7 +38,9 @@
             </div>
           </section>
           <section class="main-navigation-login">
-            <a href="login.html" role="heading" aria-level="2">Вход</a>
+            <div class="main-navigation-section-link">
+              <a href="login.html" role="heading" aria-level="2">Вход</a>
+            </div>
             <div class="popup popup-login">
               <!--Форма входа-->
               <form action="https://echo.htmlacademy.ru" method="post">
@@ -59,11 +63,13 @@
             </div>
           </section>
           <div class="main-navigation-cart cart-empty">
-            <a href="cart.html" aria-label="Корзина пуста">Пусто</a>
+            <div class="main-navigation-section-link">
+              <a href="cart.html" aria-label="Корзина пуста">Пусто</a>
+            </div>
           </div>
         </nav>
         <address class="page-header-contacts">
-          с 10 до 20, ежедневно
+          <span class="page-header-worktime">С 10 до 20, ежедневно</span>
           <a href="tel:+78124502525">8 812 450-25-25</a>
         </address>
       </div>
@@ -160,16 +166,16 @@
               Все наше мороженое изготавливается на собственном производстве,
               с использованием современного оборудования и проверенных временем технологий.
             </li>
+            <li class="features-list-cow">
+                Закупка ингредиентов  производится только у проверенных фермерских хозяйств и
+                компаний,
+                с которыми нас связывает долговременное сотрудничество.
+              </li>
             <li class="features-list-leave">
               Для приготовления мороженого используются настоящие сливки и молоко высочайшего
               качества.
               Все дополнительные ингредиенты и добавки произведены из натурального,
               экологически чистого сырья.
-            </li>
-            <li class="features-list-cow">
-              Закупка ингредиентов  производится только у проверенных фермерских хозяйств и
-              компаний,
-              с которыми нас связывает долговременное сотрудничество.
             </li>
             <li class="features-list-termo">
               Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
@@ -210,12 +216,12 @@
         <img src="img/map.png" alt="Карта" width="1200" height="430">
         <div class="container">
           <address class="map-contacts">
-            <p>Адрес главного офиса и офлайн-магазина:
-              <span class="map-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+            <p>Адрес&nbsp;главного&nbsp;офиса и&nbsp;офлайн&#8209;магазина:
+              <span class="map-address">ул.&nbsp;Большая&nbsp;Конюшенная 19/8,&nbsp;Санкт-Петербург</span>
             </p>
-            <p>Для заказов по телефону:
-              <a class="map-phone" href="tel:+78124502525">8 812 450-25-25</a>
-              <span class="map-worktime">(с 10 до 20 ежедневно)</span>
+            <p>Для&nbsp;заказов&nbsp;по&nbsp;телефону:
+              <a class="map-phone" href="tel:+78124502525">8&nbsp;812&nbsp;450-25-25</a>
+              <span class="map-worktime">(с&nbsp;10&nbsp;до&nbsp;20&nbsp;ежедневно)</span>
             </p>
             <a href="contacts.html" class="button">Форма обратной связи</a>
           </address>
@@ -224,23 +230,35 @@
     </main>
     <footer class="page-footer">
       <div class="container">
-        <p class="page-footer-socials">
-          <a href="twitter.com">Twitter</a>
-          <a href="instagramm.ru">Instagramm</a>
-          <a href="facebook.com">Facebook</a>
-          <a href="vk.ru">Вконтакте</a>
-        </p>
+        <ul class="page-footer-socials list-reset">
+          <li><a class="tw-link" href="twitter.com"><span class="visually-hidden">Twitter</span></a></li>
+          <li><a class="inst-link" href="instagramm.ru"><span class="visually-hidden">Instagramm</span></a></li>
+          <li><a class="fb-link" href="facebook.com"><span class="visually-hidden">Facebook</span></a></li>
+          <li><a class="vk-link" href="vk.ru"><span class="visually-hidden">Вконтакте</span></a></li>
+        </ul>
         <ul class="page-footer-menu list-reset">
+          <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Экологические стандарты</a></li>
+          <!-- <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">Экологические стандарты</a></li>
           <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Наши документы</a></li>
           <li><a href="#">Экологические стандарты</a></li>
+          <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">Экологические стандарты</a></li> -->
         </ul>
         <p class="page-footer-copyright">
           <a class="page-footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
           </a>
-          Сделано в <a class="page-footer-copyright-text-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017
+          Сделано в <a class="page-footer-copyright-text-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
         </p>
       </div>
     </footer>
