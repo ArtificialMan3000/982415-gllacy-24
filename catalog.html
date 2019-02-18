@@ -26,20 +26,20 @@
             <li class="main-menu-item"><a href="delivery.html">Доставка и оплата</a></li>
             <li class="main-menu-item"><a href="about.html">О Компании</a></li>
           </ul>
-          <section class="main-navigation-search">
+          <section class="main-navigation-search" tabindex="0">
             <!--Форма поиска-->
-            <div class="main-navigation-section-link">
-              <a href="search.html" role="heading" aria-level="2">Поиск</a>
+            <div class="main-navigation-section-link-wrapper">
+              <a class="main-navigation-search-link" href="search.html" role="heading" aria-level="2">Поиск</a>
             </div>
             <div class="popup popup-search">
               <form action="https://echo.htmlacademy.ru" method="GET">
-                <input type="text" name="search" aria-label="Поле поиска">
+                <input type="text" name="search" aria-label="Поле поиска" placeholder="Что ищем?">
               </form>
             </div>
           </section>
-          <section class="main-navigation-login">
-            <div class="main-navigation-section-link">
-              <a href="login.html" role="heading" aria-level="2">Вход</a>
+          <section class="main-navigation-login" tabindex="0">
+            <div class="main-navigation-section-link-wrapper">
+              <a class="main-navigation-login-link" href="login.html" role="heading" aria-level="2">Вход</a>
             </div>
             <div class="popup popup-login">
               <!--Форма входа-->
@@ -57,15 +57,17 @@
                   <input id="user-password" type="password" name="user-password" placeholder="Пароль">
                 </p>
                 <button class="button" type="submit">Войти</button>
-                <a class="popup-login-link" href="forget-password.html">Забыли пароль?</a>
-                <a class="popup-login-link" href="registration.html">Новая регистрация</a>
+                <div class="popup-login-links">
+                  <a class="popup-login-link" href="forget-password.html">Забыли пароль?</a>
+                  <a class="popup-login-link" href="registration.html">Новая регистрация</a>
+                </div>
               </form>
             </div>
           </section>
-          <section class="main-navigation-cart cart-full">
+          <section class="main-navigation-cart cart-full" tabindex="0">
             <h2 class="visually-hidden">Корзина</h2>
-            <div class="main-navigation-section-link">
-              <a href="cart.html" aria-label="В корзине 2 товара">2 товара</a>
+            <div class="main-navigation-section-link-wrapper">
+              <a class="main-navigation-cart-link" href="cart.html" aria-label="В корзине 2 товара">2 товара</a>
             </div>
             <div class="popup popup-cart">
               <form class="popup-cart-form" action="https://echo.htmlacademy.ru" method="POST">
@@ -77,10 +79,10 @@
                     <th>Стоимость</th>
                   </tr>
                   <tr class="popup-cart-form-item">
-                    <td>
-                      <input type="hidden" name="plombir-s-apelsinovim-dzhemom" value="1,5">
-                      <button class="popup-cart-form-item-close" type="button">
-                        Удалить товар
+                    <td class="popup-cart-form-item-del">
+                      <input type="hidden" name="del_product" value="plombir-s-apelsinovim-dzhemom">
+                      <button type="button">
+                        <span class="visually-hidden">Удалить товар</span>
                       </button>
                     </td>
                     <td class="popup-cart-form-item-name">
@@ -90,7 +92,9 @@
                       <span class="popup-cart-form-item-amount">
                         1,5 кг
                       </span>
-                      &times;
+                      <span class="popup-cart-form-item-multi-mark">
+                        &times;
+                      </span>
                       <span class="popup-cart-form-item-price">
                           200 руб.
                       </span>
@@ -100,11 +104,11 @@
                     </td>
                   </tr>
                   <tr class="popup-cart-form-item">
-                    <td>
-                      <input type="hidden" name="klubnichnyj-plombir-s-prisypkoj
-                      iz-belogo-shokolada" value="1,5">
-                      <button class="popup-cart-form-item-close" type="button">
-                        Удалить товар
+                    <td class="popup-cart-form-item-del">
+                      <input type="hidden" name="del_product" value="klubnichnyj-plombir-s-prisypkoj
+                      iz-belogo-shokolada">
+                      <button type="button">
+                        <span class="visually-hidden">Удалить товар</span>
                       </button>
                     </td>
                     <td class="popup-cart-form-item-name">
@@ -115,7 +119,9 @@
                       <span class="popup-cart-form-item-amount">
                         1,5 кг
                       </span>
-                      &times;
+                      <span class="popup-cart-form-item-multi-mark">
+                        &times;
+                      </span>
                       <span class="popup-cart-form-item-price">
                           300 руб.
                       </span>
@@ -125,7 +131,7 @@
                     </td>
                   </tr>
                 </table>
-                <hr>
+                <hr class="popup-cart-form-divider">
                 <p class="popup-cart-form-total">Итого: 750 руб.</p>
                 <button class="button popup-cart-form-button" type="submit">Оформить заказ</button>
               </form>
