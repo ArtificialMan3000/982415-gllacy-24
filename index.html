@@ -26,10 +26,10 @@
             <li class="main-menu-item"><a href="delivery.html">Доставка и оплата</a></li>
             <li class="main-menu-item"><a href="about.html">О Компании</a></li>
           </ul>
-          <section class="main-navigation-search">
+          <section class="main-navigation-search" tabindex="0">
             <!--Форма поиска-->
-            <div class="main-navigation-section-link">
-              <a href="search.html" role="heading" aria-level="2">Поиск</a>
+            <div class="main-navigation-section-link-wrapper">
+              <a class="main-navigation-search-link" href="search.html" role="heading" aria-level="2">Поиск</a>
             </div>
             <div class="popup popup-search">
               <form action="https://echo.htmlacademy.ru" method="GET">
@@ -37,9 +37,9 @@
               </form>
             </div>
           </section>
-          <section class="main-navigation-login">
-            <div class="main-navigation-section-link">
-              <a href="login.html" role="heading" aria-level="2">Вход</a>
+          <section class="main-navigation-login" tabindex="0">
+            <div class="main-navigation-section-link-wrapper">
+              <a class="main-navigation-login-link" href="login.html" role="heading" aria-level="2">Вход</a>
             </div>
             <div class="popup popup-login">
               <!--Форма входа-->
@@ -57,14 +57,16 @@
                   <input id="user-password" type="password" name="user-password" placeholder="Пароль">
                 </p>
                 <button class="button" type="submit">Войти</button>
-                <a class="popup-login-link" href="forget-password.html">Забыли пароль?</a>
-                <a class="popup-login-link" href="registration.html">Новая регистрация</a>
+                <div class="popup-login-links">
+                  <a class="popup-login-link" href="forget-password.html">Забыли пароль?</a>
+                  <a class="popup-login-link" href="registration.html">Новая регистрация</a>
+                </div>
               </form>
             </div>
           </section>
-          <div class="main-navigation-cart cart-empty">
-            <div class="main-navigation-section-link">
-              <a href="cart.html" aria-label="Корзина пуста">Пусто</a>
+          <div class="main-navigation-cart cart-empty" tabindex="0">
+            <div class="main-navigation-section-link-wrapper">
+              <a class="main-navigation-cart-link" href="cart.html" aria-label="Корзина пуста">Пусто</a>
             </div>
           </div>
         </nav>
@@ -114,9 +116,11 @@
           <h2 class="visually-hidden">Избранные товары</h2>
           <ul class="catalog-grid list-reset">
               <li class="catalog-grid-item catalog-item-hit">
-                <a href="product.html">
-                  <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-                </a>
+                <h3>
+                  <a href="product.html">
+                    Сливочное с апельсиновым джемом и цитрусовой стружкой
+                  </a>
+                </h3>
                 <img src="img/product1.png"
                   width="267"
                   height="267"
@@ -124,9 +128,11 @@
                 <p class="catalog-grid-item-price">310 &#8399;<small>/кг</small></p>
               </li>
               <li class="catalog-grid-item catalog-item-hit">
-                <a href="product.html">
-                  <h3>Сливочно-кофейное с кусочками шоколада</h3>
-                </a>
+                <h3>
+                  <a href="product.html">
+                    Сливочно-кофейное с кусочками шоколада
+                  </a>
+                </h3>
                 <img src="img/product2.png"
                   width="267"
                   height="267"
@@ -134,9 +140,11 @@
                 <p class="catalog-grid-item-price">380 &#8399;<small>/кг</small></p>
               </li>
               <li class="catalog-grid-item catalog-item-hit">
-                <a href="product.html">
-                  <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-                </a>
+                <h3>
+                  <a href="product.html">
+                    Сливочно-клубничное с присыпкой из белого шоколада
+                  </a>
+                </h3>
                 <img src="img/product3.png"
                   width="267"
                   height="267"
@@ -144,9 +152,11 @@
                 <p class="catalog-grid-item-price">355 &#8399;<small>/кг</small></p>
               </li>
               <li class="catalog-grid-item catalog-item-hit">
-                <a href="product.html">
-                  <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-                </a>
+                <h3>
+                  <a href="product.html">
+                    Сливочное крем-брюле с карамельной подливкой
+                  </a>
+                </h3>
                 <img src="img/product4.png"
                   width="267"
                   height="267"
@@ -241,18 +251,6 @@
           <li><a href="#">Наши документы</a></li>
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Экологические стандарты</a></li>
-          <!-- <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
-          <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
-          <li class="page-footer-menu-vendors"><a href="#">Для поставщиков</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li> -->
         </ul>
         <p class="page-footer-copyright">
           <a class="page-footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
@@ -263,8 +261,9 @@
       </div>
     </footer>
     <section class="modal modal-feedback">
+      <!-- <div class="modal-overlay"></div> -->
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <p>Мы обязательно вам ответим</p>
+      <p>Мы обязательно вам ответим!</p>
       <!--Форма обратной связи-->
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
@@ -277,17 +276,19 @@
           <label class="visually-hidden" for="feedback-email">
               Ваша почта для ответа?
           </label>
-          <input type="text" id="feedback-email" name="feedback-email" placeholder="Ваша почта для ответа?">
+          <input type="email" id="feedback-email" name="feedback-email" placeholder="Ваша почта для ответа?">
         </p>
         <p>
           <label class="visually-hidden" for="feedback-text">
               Напишите что-нибудь...
           </label>
-          <textarea id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..." rows="7"></textarea>
+          <textarea id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..." rows="5"></textarea>
         </p>
-        <button type="submit" class="button">Отправить</button>
+        <div class="button-aligner">
+          <button type="submit" class="button">Отправить</button>
+        </div>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
   </body>
 </html>
