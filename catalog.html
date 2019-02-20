@@ -10,7 +10,7 @@
     <header class="page-header">
       <div class="container">
         <nav class="main-navigation">
-          <a class="page-header-logo"href="index.html">
+          <a class="page-header-logo" href="index.html">
             <img src="img/logo.svg" alt="Gllacy Shop" width="154" height="64">
           </a>
           <ul class="main-menu list-reset">
@@ -27,9 +27,10 @@
             <li class="main-menu-item"><a href="about.html">О Компании</a></li>
           </ul>
           <section class="main-navigation-search" tabindex="0">
+            <h2 class="visually-hidden">Поиск</h2>
             <!--Форма поиска-->
             <div class="main-navigation-section-link-wrapper">
-              <a class="main-navigation-search-link" href="search.html" role="heading" aria-level="2">Поиск</a>
+              <a class="main-navigation-search-link" href="search.html">Поиск</a>
             </div>
             <div class="popup popup-search">
               <form action="https://echo.htmlacademy.ru" method="GET">
@@ -38,8 +39,9 @@
             </div>
           </section>
           <section class="main-navigation-login" tabindex="0">
+            <h2 class="visually-hidden">Вход</h2>
             <div class="main-navigation-section-link-wrapper">
-              <a class="main-navigation-login-link" href="login.html" role="heading" aria-level="2">Вход</a>
+              <a class="main-navigation-login-link" href="login.html">Вход</a>
             </div>
             <div class="popup popup-login">
               <!--Форма входа-->
@@ -138,11 +140,11 @@
             </div>
           </section>
         </nav>
-      </div>
-      <address class="page-header-contacts">
+        <address class="page-header-contacts">
           <span class="page-header-worktime">С 10 до 20, ежедневно</span>
           <a href="tel:+78124502525">8 812 450-25-25</a>
         </address>
+      </div>
     </header>
     <main class="container">
       <ul class="breadcrumbs list-reset">
@@ -160,52 +162,59 @@
           <fieldset class="filter-item filter-sort">
             <legend class="filter-header">Сортировка:</legend>
             <select id="filter-sort" name="filter-sort">
-              <option value="popular">По популярности</option>
-              <option value="price">По цене</option>
-              <option value="new">По новизне</option>
+              <option value="popular">по популярности</option>
+              <option value="price">по цене</option>
+              <option value="new">по новизне</option>
             </select>
           </fieldset>
           <fieldset class="filter-item filter-price">
             <div class="filter-header">
               <legend>Цена:</legend>
               <span class="filter-price-range">
-                <output id="filter-price-min" name="filter-price-min">0</output> руб.
+                <output id="filter-price-min" name="filter-price-min">100</output> руб.
                 -
-                <output id="filter-price-max" name="filter-price-max">700</output> руб.
+                <output id="filter-price-max" name="filter-price-max">500</output> руб.
               </span>
+            </div>
+            <div class="multiple-range">
+              <div class="multiple-range-handler-1"></div>
+              <div class="multiple-range-handler-2"></div>
             </div>
             <input type="range" name="filter-price" id="filter-price" min="0" max="700" step="10">
           </fieldset>
           <fieldset class="filter-item filter-fat">
             <legend class="filter-header">Жирность:</legend>
-            <label for="filter-fat-0">0%</label>
+
             <input id="filter-fat-0" type="radio" name="filter-fat" value="0">
+            <label for="filter-fat-0">0%</label>
 
-            <label for="filter-fat-to10">до 10%</label>
             <input id="filter-fat-to10" type="radio" name="filter-fat" value="to10" checked>
+            <label for="filter-fat-to10">до 10%</label>
 
-            <label for="filter-fat-to30">до 30%</label>
             <input id="filter-fat-to30" type="radio" name="filter-fat" value="to30">
+            <label for="filter-fat-to30">до 30%</label>
 
-            <label for="filter-fat-from30">выше 30%</label>
             <input id="filter-fat-from30" type="radio" name="filter-fat" value="from30">
+            <label for="filter-fat-from30">выше 30%</label>
           </fieldset>
           <fieldset class="filter-item filter-fat">
             <legend class="filter-header">Наполнители:</legend>
-            <label for="filter-fillers-chock">шоколадные</label>
+
             <input id="filter-fillers-chock" type="checkbox" name="filter-fillers-chock" checked>
+            <label for="filter-fillers-chock">шоколадные</label>
 
-            <label for="filter-fillers-sugar">сахарные присыпки</label>
             <input id="filter-fillers-sugar" type="checkbox" name="filter-fillers-sugar" checked>
+            <label for="filter-fillers-sugar">сахарные присыпки</label>
 
-            <label for="filter-fillers-fruits">фрукты</label>
             <input id="filter-fillers-fruits" type="checkbox" name="filter-fillers-fruits">
+            <label for="filter-fillers-fruits">фрукты</label>
 
-            <label for="filter-fillers-syrup">сиропы</label>
             <input id="filter-fillers-syrup" type="checkbox" name="filter-fillers-syrup">
+            <label for="filter-fillers-syrup">сиропы</label>
 
-            <label for="filter-fillers-jam">джемы</label>
             <input id="filter-fillers-jam" type="checkbox" name="filter-fillers-jam">
+            <label for="filter-fillers-jam">джемы</label>
+
           </fieldset>
           <button type="submit">Применить</button>
         </form>
@@ -288,7 +297,7 @@
               width="267"
               height="267"
               alt="Сливочно-черничное с цельными ягодами черники ">
-            <p class="catalog-grid-item-price">310 &#8399;<small>/кг</small></p>
+            <p class="catalog-grid-item-price">410 &#8399;<small>/кг</small></p>
             <a class="button" href="product.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-grid-item">
@@ -301,7 +310,7 @@
               width="267"
               height="267"
               alt="Сливочно-лимонное с карамельной присыпкой">
-            <p class="catalog-grid-item-price">410 &#8399;<small>/кг</small></p>
+            <p class="catalog-grid-item-price">375 &#8399;<small>/кг</small></p>
             <a class="button" href="product.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-grid-item">
@@ -314,7 +323,7 @@
               width="267"
               height="267"
               alt="Сливочное с шоколадной стружкой">
-            <p class="catalog-grid-item-price">375 &#8399;<small>/кг</small></p>
+            <p class="catalog-grid-item-price">320 &#8399;<small>/кг</small></p>
             <a class="button" href="product.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-grid-item">
@@ -327,7 +336,7 @@
               width="267"
               height="267"
               alt="Сливочно-ванильное с кусочками шоколада">
-            <p class="catalog-grid-item-price">320 &#8399;<small>/кг</small></p>
+            <p class="catalog-grid-item-price">440 &#8399;<small>/кг</small></p>
             <a class="button" href="product.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-grid-item">
@@ -340,7 +349,7 @@
               width="267"
               height="267"
               alt="Сливочноe с ментоловым сиропом">
-            <p class="catalog-grid-item-price">440 &#8399;<small>/кг</small></p>
+            <p class="catalog-grid-item-price">435 &#8399;<small>/кг</small></p>
             <a class="button" href="product.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-grid-item">
@@ -353,7 +362,7 @@
               width="267"
               height="267"
               alt="Сливочное с кусочками черного шоколада">
-            <p class="catalog-grid-item-price">435 &#8399;<small>/кг</small></p>
+            <p class="catalog-grid-item-price">355 &#8399;<small>/кг</small></p>
             <a class="button" href="product.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-grid-item">
@@ -366,19 +375,25 @@
               width="267"
               height="267"
               alt="Сливочное с мятным сиропом">
-            <p class="catalog-grid-item-price">355 &#8399;<small>/кг</small></p>
+            <p class="catalog-grid-item-price">420 &#8399;<small>/кг</small></p>
             <a class="button" href="product.html">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
       <ul class="pagination list-reset">
-        <li class="pagination-item pagination-item-back pagination-item-disabled"><a>Назад</a></li>
+        <li class="pagination-item pagination-item-back pagination-item-disabled">
+          <a><span class="visually-hidden">Назад</span></a>
+        </li>
         <li class="pagination-item pagination-item-active"><a>1</a></li>
         <li class="pagination-item"><a href="catalog.html">2</a></li>
         <li class="pagination-item"><a href="catalog.html">3</a></li>
         <li class="pagination-item"><a href="catalog.html">4</a></li>
         <li class="pagination-item"><a href="catalog.html">5</a></li>
-        <li class="pagination-item pagination-item-forward"><a href="catalog.html">Вперёд</a></li>
+        <li class="pagination-item pagination-item-forward">
+          <a href="catalog.html">
+            <span class="visually-hidden">Вперёд</span>
+          </a>
+        </li>
       </ul>
     </main>
     <footer class="page-footer">
