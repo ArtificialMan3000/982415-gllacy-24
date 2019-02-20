@@ -107,6 +107,7 @@ img {
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   color: #323232;
+  z-index: 10;
 }
 .modal {
   border-radius: 10px;
