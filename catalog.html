@@ -162,58 +162,66 @@
         <form action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="filter-item filter-sort">
             <legend class="filter-header">Сортировка:</legend>
-            <select id="filter-sort" name="filter-sort">
-              <option value="popular">по популярности</option>
-              <option value="price">по цене</option>
-              <option value="new">по новизне</option>
-            </select>
+            <div class="select-wrap">
+              <select id="filter-sort" name="filter-sort">
+                <option value="popular">по популярности</option>
+                <option value="price">по цене</option>
+                <option value="new">по новизне</option>
+              </select>
+            </div>
           </fieldset>
           <fieldset class="filter-item filter-price">
             <div class="filter-header">
               <legend>Цена:</legend>
               <span class="filter-price-range">
-                <output id="filter-price-min" name="filter-price-min">100</output> руб.
+                <label class="filter-price-min">
+                  <input id="filter-price-min" type="text" value="100" name="filter-price-min"> руб.
+                </label>
                 -
-                <output id="filter-price-max" name="filter-price-max">500</output> руб.
+                <label class="filter-price-max">
+                  <input id="filter-price-max" type="text" value="500"name="filter-price-max"> руб.
+                </label>
               </span>
             </div>
-            <div class="multiple-range">
-              <div class="multiple-range-handler-1"></div>
-              <div class="multiple-range-handler-2"></div>
+            <div class="multi-range">
+              <div class="multi-range-out"></div>
+              <div class="multi-range-inn"><div class="multi-range-handler multi-range-handler-1"></div>
+              <div class="multi-range-handler multi-range-handler-2"></div></div>
+
             </div>
-            <input type="range" name="filter-price" id="filter-price" min="0" max="700" step="10">
+            <!--<input type="range" name="filter-price" id="filter-price" min="0" max="700" step="10">-->
           </fieldset>
           <fieldset class="filter-item filter-fat">
             <legend class="filter-header">Жирность:</legend>
 
-            <input id="filter-fat-0" type="radio" name="filter-fat" value="0">
+            <input class="visually-hidden" id="filter-fat-0" type="radio" name="filter-fat" value="0">
             <label for="filter-fat-0">0%</label>
 
-            <input id="filter-fat-to10" type="radio" name="filter-fat" value="to10" checked>
+            <input class="visually-hidden" id="filter-fat-to10" type="radio" name="filter-fat" value="to10" checked disabled>
             <label for="filter-fat-to10">до 10%</label>
 
-            <input id="filter-fat-to30" type="radio" name="filter-fat" value="to30">
+            <input class="visually-hidden" id="filter-fat-to30" type="radio" name="filter-fat" value="to30">
             <label for="filter-fat-to30">до 30%</label>
 
-            <input id="filter-fat-from30" type="radio" name="filter-fat" value="from30">
+            <input class="visually-hidden" id="filter-fat-from30" type="radio" name="filter-fat" value="from30">
             <label for="filter-fat-from30">выше 30%</label>
           </fieldset>
-          <fieldset class="filter-item filter-fat">
+          <fieldset class="filter-item filter-fillers">
             <legend class="filter-header">Наполнители:</legend>
 
-            <input id="filter-fillers-chock" type="checkbox" name="filter-fillers-chock" checked>
+            <input class="visually-hidden" id="filter-fillers-chock" type="checkbox" name="filter-fillers-chock" checked>
             <label for="filter-fillers-chock">шоколадные</label>
 
-            <input id="filter-fillers-sugar" type="checkbox" name="filter-fillers-sugar" checked>
+            <input class="visually-hidden" id="filter-fillers-sugar" type="checkbox" name="filter-fillers-sugar" disabled checked>
             <label for="filter-fillers-sugar">сахарные присыпки</label>
 
-            <input id="filter-fillers-fruits" type="checkbox" name="filter-fillers-fruits">
+            <input class="visually-hidden" id="filter-fillers-fruits" type="checkbox" name="filter-fillers-fruits">
             <label for="filter-fillers-fruits">фрукты</label>
 
-            <input id="filter-fillers-syrup" type="checkbox" name="filter-fillers-syrup">
+            <input class="visually-hidden" id="filter-fillers-syrup" type="checkbox" name="filter-fillers-syrup">
             <label for="filter-fillers-syrup">сиропы</label>
 
-            <input id="filter-fillers-jam" type="checkbox" name="filter-fillers-jam">
+            <input class="visually-hidden" id="filter-fillers-jam" type="checkbox" name="filter-fillers-jam">
             <label for="filter-fillers-jam">джемы</label>
 
           </fieldset>
