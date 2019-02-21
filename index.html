@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Gllacy Shop - магазин мороженого</title>
-    <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Gllacy Shop - магазин мороженого</title>
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <input id="slider-nav1" class="slider-nav-input visually-hidden" type="radio" name="bg-toggle" checked>
+  <input id="slider-nav2" class="slider-nav-input visually-hidden" type="radio" name="bg-toggle">
+  <input id="slider-nav3" class="slider-nav-input visually-hidden" type="radio" name="bg-toggle">
+  <div class="background-holder">
     <header class="page-header">
       <div class="container">
         <nav class="main-navigation">
@@ -88,16 +92,36 @@
               <h3>Крем-брюле и пломбир с малиновым джемом</h3>
               <a href="#" class="button">Давайте оба</a>
             </li>
+            <li id="slide2" class="slider-item slide-2">
+              <h3>Шоколадный пломбир и лимонный сорбет</h3>
+              <a href="#" class="button">Давайте оба</a>
+            </li>
+            <li id="slide3" class="slider-item slide-3">
+              <h3>Пломбир с помадкой и клубничный щербет</h3>
+              <a href="#" class="button">Давайте оба</a>
+            </li>
           </ul>
           <ul class="slider-nav list-reset">
-            <li id="slide-nav1" class="slide-nav-active">
-              <button class="slider-nav-button" type="button">1 слайд</button>
+            <li class="slider-nav-item">
+              <label for="slider-nav1" tabindex="0">
+                <span class="visually-hidden">
+                  Первый слайд
+                </span>
+              </label>
             </li>
-            <li id="slide-nav2">
-              <button class="slider-nav-button" type="button">2 слайд</button>
+            <li class="slider-nav-item">
+              <label for="slider-nav2" tabindex="0">
+                <span class="visually-hidden">
+                  Второй слайд
+                </span>
+              </label>
             </li>
-            <li id="slide-nav3">
-              <button class="slider-nav-button" type="button">3 слайд</button>
+            <li class="slider-nav-item">
+              <label for="slider-nav3" tabindex="0">
+                <span class="visually-hidden">
+                  Третий слайд
+                </span>
+              </label>
             </li>
           </ul>
         </section>
@@ -117,55 +141,67 @@
         <section class="featured-products">
           <h2 class="visually-hidden">Избранные товары</h2>
           <ul class="catalog-grid list-reset">
-              <li class="catalog-grid-item catalog-item-hit">
-                <h3>
-                  <a href="product.html">
-                    Сливочное с апельсиновым джемом и цитрусовой стружкой
-                  </a>
-                </h3>
-                <img src="img/product1.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                <p class="catalog-grid-item-price">310 &#8399;<small>/кг</small></p>
-              </li>
-              <li class="catalog-grid-item catalog-item-hit">
-                <h3>
-                  <a href="product.html">
-                    Сливочно-кофейное с кусочками шоколада
-                  </a>
-                </h3>
-                <img src="img/product2.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочно-кофейное с кусочками шоколада">
-                <p class="catalog-grid-item-price">380 &#8399;<small>/кг</small></p>
-              </li>
-              <li class="catalog-grid-item catalog-item-hit">
-                <h3>
-                  <a href="product.html">
-                    Сливочно-клубничное с присыпкой из белого шоколада
-                  </a>
-                </h3>
-                <img src="img/product3.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                <p class="catalog-grid-item-price">355 &#8399;<small>/кг</small></p>
-              </li>
-              <li class="catalog-grid-item catalog-item-hit">
-                <h3>
-                  <a href="product.html">
-                    Сливочное крем-брюле с карамельной подливкой
-                  </a>
-                </h3>
-                <img src="img/product4.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочное крем-брюле с карамельной подливкойй">
-                <p class="catalog-grid-item-price">415 &#8399;<small>/кг</small></p>
-              </li>
-            </ul>
+            <li class="catalog-grid-item catalog-item-hit">
+              <h3>
+                <a href="product.html">
+                  Сливочное с апельсиновым джемом и цитрусовой стружкой
+                </a>
+              </h3>
+              <img src="img/product1.png"
+                width="267"
+                height="267"
+                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <p class="catalog-grid-item-price">310 &#8399;<small>/кг</small></p>
+              <div class="catalog-hover-effect">
+                <a class="button" href="product.html">Быстрый просмотр</a>
+              </div>
+            </li>
+            <li class="catalog-grid-item catalog-item-hit">
+              <h3>
+                <a href="product.html">
+                  Сливочно-кофейное с кусочками шоколада
+                </a>
+              </h3>
+              <img src="img/product2.png"
+                width="267"
+                height="267"
+                alt="Сливочно-кофейное с кусочками шоколада">
+              <p class="catalog-grid-item-price">380 &#8399;<small>/кг</small></p>
+              <div class="catalog-hover-effect">
+                <a class="button" href="product.html">Быстрый просмотр</a>
+              </div>
+            </li>
+            <li class="catalog-grid-item catalog-item-hit">
+              <h3>
+                <a href="product.html">
+                  Сливочно-клубничное с присыпкой из белого шоколада
+                </a>
+              </h3>
+              <img src="img/product3.png"
+                width="267"
+                height="267"
+                alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <p class="catalog-grid-item-price">355 &#8399;<small>/кг</small></p>
+              <div class="catalog-hover-effect">
+                <a class="button" href="product.html">Быстрый просмотр</a>
+              </div>
+            </li>
+            <li class="catalog-grid-item catalog-item-hit">
+              <h3>
+                <a href="product.html">
+                  Сливочное крем-брюле с карамельной подливкой
+                </a>
+              </h3>
+              <img src="img/product4.png"
+                width="267"
+                height="267"
+                alt="Сливочное крем-брюле с карамельной подливкой">
+              <p class="catalog-grid-item-price">415 &#8399;<small>/кг</small></p>
+              <div class="catalog-hover-effect">
+                <a class="button" href="product.html">Быстрый просмотр</a>
+              </div>
+            </li>
+          </ul>
         </section>
         <section class="features">
           <h2 class="visually-hidden">Особенности</h2>
@@ -204,7 +240,7 @@
               столу
             </a>
           </article>
-          <div class="background-wrapper">
+          <div class="subscr-background-wrapper">
             <section class="subscription">
               <h2 class="visually-hidden">Подписка</h2>
               <p class="subscription-info">
@@ -292,5 +328,6 @@
       </form>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
-  </body>
+  </div>
+</body>
 </html>

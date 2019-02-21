@@ -31,7 +31,6 @@ body {
   line-height: 22px;
   font-weight: normal;
   color: #fff;
-  background-color: #859e90;
 }
 .inner-page .main {
   font-weight: 500;
@@ -44,6 +43,30 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.background-holder {
+  background-color: #849d8f;
+  background-image: url("../img/slide1.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+#slider-nav1:checked ~ .background-holder {
+  background-color: #849d8f;
+  background-image: url("../img/slide1.png");
+}
+#slider-nav2:checked ~ .background-holder {
+  background-color: #8996a6;
+  background-image: url("../img/slide2.png");
+}
+#slider-nav3:checked ~ .background-holder {
+  background-color: #9d8b84;
+  background-image: url("../img/slide3.png");
+}
+
+.inner-page .background-holder {
+  background-image: none;
 }
 
 .container {
@@ -85,6 +108,7 @@ img {
   box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
   background-image: linear-gradient(to top, #ca3824, #f26843);
   text-align: center;
+  cursor: pointer;
 }
 .button:hover,
 .button:focus {
@@ -249,6 +273,7 @@ img {
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  z-index: 3;
 }
 .main-menu-item:hover .catalog-menu {
   display: block;
@@ -544,6 +569,7 @@ img {
   line-height: 16px;
   font-weight: bold;
   font-style: normal;
+  z-index: 5;
 }
 .page-header-contacts a {
   font-size: 22px;
@@ -552,41 +578,91 @@ img {
 }
 
 .slider {
-  height: 553px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  position: relative;
 }
 .slider-list {
+  position: relative;
+  min-height: 533px;
   list-style-type: none;
 }
-.slider-list h3 {
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.slider-item h3 {
+  position: absolute;
+  bottom: 90px;
+  max-width: 670px;
   margin: 0;
+  margin-bottom: 8px;
+  margin-top: auto;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
   text-align: center;
 }
+.slider-item .button {
+  min-width: 280px;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+  border-radius: 32px;
+}
+
 .slide-1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* .slide-1 {
   background-image: url("../img/slide1.png");
   background-repeat: no-repeat;
   background-position: top center;
+} */
+.slide-2, .slide-3 {
+  display: none;
 }
+
 .slider-nav {
-  list-style-type: none;
+  position: absolute;
+  left: 1px;
+  bottom: 18px;
+}
+.slider-nav li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.slider-nav label {
+  display: block;
+  width: 21px;
+  height: 21px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+.slider-nav label:hover,
+.slider-nav label:focus {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+#slider-nav1:checked ~ .background-holder label[for="slider-nav1"] {
+  background-color: #fff;
+}
+#slider-nav2:checked ~ .background-holder label[for="slider-nav2"] {
+  background-color: #fff;
+}
+#slider-nav3:checked ~ .background-holder label[for="slider-nav3"] {
+  background-color: #fff;
 }
 .slider-nav-button {
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 50%;
-}
-.slider-nav-button:hover,
-.slider-nav-button:focus {
-  background-color: rgba(248, 247, 244, 0.4);
-}
-.slider-nav-button:active {
-  background-color: #fff;
-}
-.slide-nav-active button {
-  background-color: #fff;
 }
 
 .promo {
@@ -787,12 +863,6 @@ img {
 .catalog-grid-item img {
   width: 267px;
 }
-.catalog-grid-item:hover,
-.catalog-grid-item:focus {
-  background-color: rgba(248, 247, 244, 0.2);
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-}
 .catalog-grid-item a {
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -824,8 +894,30 @@ img {
 .catalog-grid-item-price small {
   font-size: 30px;
 }
-.catalog-grid-item .button {
+.catalog-hover-effect {
+  position: absolute;
+  top: -6px;
+  bottom: -77px;
+  left: -14px;
+  right: -14px;
   display: none;
+  z-index: -1;
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+.catalog-grid-item:hover,
+.catalog-grid-item:focus {
+  z-index: 1;
+}
+.catalog-grid-item:hover .catalog-hover-effect {
+  display: flex;
+  justify-content: center;
+}
+.catalog-hover-effect .button {
+  margin-top: auto;
+  margin-bottom: 22px;
+  border: none;
 }
 
 .features {
@@ -924,7 +1016,7 @@ img {
   color: #e84d37;
 }
 
-.background-wrapper {
+.subscr-background-wrapper {
   width: 560px;
   /* Сделал через фон, потому что вырезать рамку - это жесть) */
   background-image: url("../img/post-pattern.png");
