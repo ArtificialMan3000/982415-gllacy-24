@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Gllacy Shop - магазин мороженого</title>
   <link href="css/normalize.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.min.css" rel="stylesheet" />
 </head>
 <body class="inner-page">
   <div class="background-holder">
@@ -89,6 +89,7 @@
                       </button>
                     </td>
                     <td class="popup-cart-form-item-name">
+                      <img src="img/product1-mini.png" alt="Пломбир с апельсиновым джемом" width="33" height="33">
                       Пломбир с апельсиновым джемом
                     </td>
                     <td class="popup-cart-form-item-amount-price">
@@ -115,6 +116,7 @@
                       </button>
                     </td>
                     <td class="popup-cart-form-item-name">
+                      <img src="img/product2-mini.png" alt="Пломбир с апельсиновым джемом" width="33" height="33">
                       Клубничный пломбир с присыпкой
                       из белого шоколада
                     </td>
@@ -171,23 +173,24 @@
             </div>
           </fieldset>
           <fieldset class="filter-item filter-price">
-            <div class="filter-header">
-              <legend>Цена:</legend>
-              <span class="filter-price-range">
-                <label class="filter-price-min">
-                  <input id="filter-price-min" type="text" value="100" name="filter-price-min"> руб.
-                </label>
-                -
-                <label class="filter-price-max">
-                  <input id="filter-price-max" type="text" value="500"name="filter-price-max"> руб.
-                </label>
-              </span>
-            </div>
-            <div class="multi-range">
-              <div class="multi-range-out"></div>
-              <div class="multi-range-inn"><div class="multi-range-handler multi-range-handler-1"></div>
-              <div class="multi-range-handler multi-range-handler-2"></div></div>
-
+            <legend class="filter-header">Цена:</legend>
+            <span class=" filter-header filter-price-range">
+              <label class="filter-price-min">
+                <input id="filter-price-min" type="text" value="100" name="filter-price-min"> руб.
+              </label>
+              -
+              <label class="filter-price-max">
+                <input id="filter-price-max" type="text" value="500" name="filter-price-max"> руб.
+              </label>
+            </span>
+            <div class="multi-range-wrap">
+              <div class="multi-range">
+                <div class="multi-range-out"></div>
+                <div class="multi-range-inn">
+                  <div class="multi-range-handler multi-range-handler-1"></div>
+                  <div class="multi-range-handler multi-range-handler-2"></div>
+                </div>
+              </div>
             </div>
             <!--<input type="range" name="filter-price" id="filter-price" min="0" max="700" step="10">-->
           </fieldset>
@@ -233,7 +236,7 @@
         <ul class="catalog-grid list-reset">
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a class="catalog-grid-item-link" href="product.html">
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
               </a>
             </h3>
@@ -248,7 +251,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочно-кофейное с кусочками шоколада
               </a>
             </h3>
@@ -263,7 +266,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочно-клубничное с присыпкой из белого шоколада
               </a>
             </h3>
@@ -278,7 +281,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочное крем-брюле с карамельной подливкой
               </a>
             </h3>
@@ -293,7 +296,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочное с брусничным джемом
               </a>
             </h3>
@@ -308,7 +311,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочно-черничное с цельными ягодами черники
               </a>
             </h3>
@@ -323,7 +326,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочно-лимонное с карамельной присыпкой
               </a>
             </h3>
@@ -338,7 +341,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочное с шоколадной стружкой
               </a>
             </h3>
@@ -353,7 +356,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочно-ванильное с кусочками шоколада
               </a>
             </h3>
@@ -368,7 +371,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочноe с ментоловым сиропом
               </a>
             </h3>
@@ -383,7 +386,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочное с кусочками черного шоколада
               </a>
             </h3>
@@ -398,7 +401,7 @@
           </li>
           <li class="catalog-grid-item">
             <h3>
-              <a href="product.html">
+              <a  class="catalog-grid-item-link" href="product.html">
                 Сливочное с мятным сиропом
               </a>
             </h3>
@@ -417,7 +420,7 @@
         <li class="pagination-item pagination-item-back pagination-item-disabled">
           <a><span class="visually-hidden">Назад</span></a>
         </li>
-        <li class="pagination-item pagination-item-active"><a>1</a></li>
+        <li class="pagination-item pagination-item-current"><a>1</a></li>
         <li class="pagination-item"><a href="catalog.html">2</a></li>
         <li class="pagination-item"><a href="catalog.html">3</a></li>
         <li class="pagination-item"><a href="catalog.html">4</a></li>
