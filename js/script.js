@@ -65,3 +65,28 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+ymaps.ready(init);
+function init(){
+  // Создание карты.
+  var myMap = new ymaps.Map("map", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    // Чтобы не определять координаты центра карты вручную,
+    // воспользуйтесь инструментом Определение координат.
+    center: [59.938631, 30.327055],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 15
+  });
+  var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
+    // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+    balloonContentHeader: "Gllacy Shop",
+    balloonContentBody: "ул. Большая Конюшенная 19/8, Санкт-Петербург",
+    balloonContentFooter: "8 812 450-25-25",
+    hintContent: "Gllacy Shop"
+  });
+  myMap.geoObjects.add(myPlacemark);
+}
