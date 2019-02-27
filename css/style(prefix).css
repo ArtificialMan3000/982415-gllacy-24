@@ -253,7 +253,7 @@ img {
 .modal input[type=email],
 .modal input[type=search],
 .modal textarea {
-  font-weight: 400;
+  font-weight: bold;
   font-size: 14px;
   line-height: 24px;
   color: #323232;
@@ -283,6 +283,7 @@ img {
 .modal input[type=search]::-webkit-input-placeholder,
 .modal textarea::-webkit-input-placeholder {
   color: #999;
+  font-weight: 400;
 }
 .popup input[type=text]:-ms-input-placeholder,
 .popup input[type=password]:-ms-input-placeholder,
@@ -295,6 +296,7 @@ img {
 .modal input[type=search]:-ms-input-placeholder,
 .modal textarea:-ms-input-placeholder {
   color: #999;
+  font-weight: 400;
 }
 .popup input[type=text]::-ms-input-placeholder,
 .popup input[type=password]::-ms-input-placeholder,
@@ -307,6 +309,7 @@ img {
 .modal input[type=search]::-ms-input-placeholder,
 .modal textarea::-ms-input-placeholder {
   color: #999;
+  font-weight: 400;
 }
 .popup input[type=text]::placeholder,
 .popup input[type=password]::placeholder,
@@ -319,6 +322,7 @@ img {
 .modal input[type=search]::placeholder,
 .modal textarea::placeholder {
   color: #999;
+  font-weight: 400;
 }
 .popup input[type=text]:hover,
 .popup input[type=password]:hover,
@@ -1614,7 +1618,7 @@ img {
   padding-bottom: 10px;
   padding-left: 13px;
 
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
   color: #323232;
 
@@ -1622,15 +1626,19 @@ img {
   border-radius: 5px;
 }
 .subscription-form input::-webkit-input-placeholder {
+  font-weight: 400;
   color: #999;
 }
 .subscription-form input:-ms-input-placeholder {
+  font-weight: 400;
   color: #999;
 }
 .subscription-form input::-ms-input-placeholder {
+  font-weight: 400;
   color: #999;
 }
 .subscription-form input::placeholder {
+  font-weight: 400;
   color: #999;
 }
 .subscription-form input:hover {
