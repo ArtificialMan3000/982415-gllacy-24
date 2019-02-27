@@ -193,7 +193,7 @@ img {
 .modal input[type=email],
 .modal input[type=search],
 .modal textarea {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: #323232;
@@ -211,6 +211,18 @@ img {
 .modal input[type=email],
 .modal input[type=search] {
   height: 44px;
+}
+.popup input[type=text]::placeholder,
+.popup input[type=password]::placeholder,
+.popup input[type=email]::placeholder,
+.popup input[type=search]::placeholder,
+.popup textarea::placeholder,
+.modal input[type=text]::placeholder,
+.modal input[type=password]::placeholder,
+.modal input[type=email]::placeholder,
+.modal input[type=search]::placeholder,
+.modal textarea::placeholder {
+  color: #999;
 }
 .popup input[type=text]:hover,
 .popup input[type=password]:hover,
@@ -1407,6 +1419,9 @@ img {
 
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
+}
+.subscription-form input::placeholder {
+  color: #999;
 }
 .subscription-form input:hover {
   border-color: rgba(154, 154, 154, 0.52);
